@@ -52,6 +52,7 @@ int main() {
     Notifier* emailNotifier = new EmailNotifier();
     Notifier* smsNotifier = new SMSNotifier(emailNotifier);
     Notifier* slackNotifier = new SlackNotifier(smsNotifier);
+    
     slackNotifier->sendNotification("Critical System Alert!");
 
     delete slackNotifier; 
